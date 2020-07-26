@@ -1,5 +1,20 @@
 
+'''
+1: Create a Python script which sends a single counter metric with the following details: 2:
 
+Setup a WavefrontSender which uses DirectIngestion     a)
+
+DirectIngestion Server: “elgon.wavefront.com” 
+b) DirectIngestion Token: “TOKEN” 
+c) Metric name: “sd.interview.test” 
+d) Value: 42 
+e) TimeStamp: Local timestamp in milliseconds 
+f) Source: “sd-laptop” 
+g) Tags: { “developer”: “sd”, “codetest”: “python” } 
+h) Must flush and close the connection Must print to console:  
+“Metric send to <server>” “Failures: <failure_count>” 
+Catch all exceptions when sending the metric and print any error captured 
+'''
 #from wavefront_sdk import WavefrontProxyClient
 from wavefront_sdk import WavefrontDirectClient
 import time
